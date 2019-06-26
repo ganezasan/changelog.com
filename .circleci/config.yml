@@ -133,17 +133,4 @@ workflows:
   version: 2
   build:
     jobs:
-      - deps
-      # - test:
-      #     requires:
-      #       - deps
-      - assets:
-          requires:
-            - deps
-      - publish:
-          requires:
-            # - test
-            - assets
-          filters:
-            branches:
-              only: master
+      - test
